@@ -1,0 +1,283 @@
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999; /* Pastikan navbar berada di atas konten lain */
+    background-color: rgba(0, 123, 255, 0.7);
+    overflow: hidden;
+}
+
+
+nav .container {
+    width: 100%; /* Lebar penuh */
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Menggunakan flexbox */
+    text-align: center; /* Rata tengah */
+}
+
+nav ul li a {
+    display: block;
+    color: white; /* Warna teks */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3; /* Warna latar belakang saat dihover */
+}
+
+/* Menambahkan efek active saat salah satu link aktif */
+nav ul li a.active {
+    background-color: #004c99;
+}
+
+/* Membuat tampilan dropdown untuk versi mobile */
+nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+nav ul li:hover ul.dropdown {
+    display: block;
+}
+
+nav ul li ul.dropdown li {
+    display: block;
+}
+
+nav ul li ul.dropdown li a {
+    color: #333;
+}
+
+/* CSS untuk hamburger icon */
+.hamburger {
+    display: none; /* Sembunyikan hamburger di layar besar */
+}
+
+@media (max-width: 768px) {
+    /* Tampilkan hamburger di layar kecil */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none; /* Sembunyikan daftar menu di layar kecil */
+        flex-direction: column; /* Tampilan vertical di layar kecil */
+        text-align: center; /* Rata tengah di layar kecil */
+    }
+
+    nav ul li {
+        text-align: center; /* Pusatkan teks di layar kecil */
+    }
+
+    nav.active ul {
+        display: block; /* Tampilkan daftar menu saat navbar aktif di layar kecil */
+    }
+
+    nav ul li {
+        display: block; /* Atur daftar menu menjadi blok */
+        margin: 0 auto; /* Pusatkan daftar menu secara horizontal */
+    }
+    nav .container {
+        width: 100%; /* Lebar penuh */
+        display: flex;
+        justify-content: center; /* Meletakkan elemen di tengah */
+    }
+    /* Style untuk layar kecil */
+
+    .section-content {
+        padding: 10px;
+    }
+
+    .italic-heading {
+        font-size: 1em;
+        margin-bottom: 10px; /* Tambahkan margin bawah untuk spasi */
+    }
+
+    .bullet {
+        padding-left: 20px;
+    }
+
+    .italic-heading span {
+        display: block; /* Buat span dalam p menjadi blok */
+        margin-top: 5px; /* Tambahkan margin atas untuk spasi */
+        text-align: left; /* Rata kiri pada layar kecil */
+    }
+}
+
+.bullet li {
+    list-style-type: disc; /* Mengatur gaya marker menjadi titik bulat */
+    margin-left: 20px; /* Jarak antara marker dan teks */
+}
+
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+.italic-heading {
+    font-style: italic;
+    font-weight: bold; /* Tebal */
+}
+
+header p {
+    font-size: 18px;
+}
+
+.profile-pic {
+    margin-top: 20px;
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.section-content img {
+    max-width: 200px; /* Ukuran maksimal gambar */
+    height: auto; /* Mengatur tinggi gambar secara proporsional */
+    border-radius: 8px; /* Membuat sudut gambar menjadi bulat */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada gambar */
+    margin: 0 auto; /* Memusatkan gambar di dalam item */
+    margin-bottom: 20px; /* Tambahkan margin bawah pada gambar */
+}
+
+
+.about-me,
+section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.section-content {
+    padding: 10px 0;
+}
+
+h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 15px 0 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.skills ul,
+.volunteer ul,
+.prestasi ul,
+.education ul {
+    padding-left: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Container */
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Navbar */
+    nav ul {
+        flex-direction: column; /* Mengatur arah menjadi vertikal */
+        align-items: center; /* Mengatur posisi item menjadi di tengah */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Menambahkan jarak antar item */
+    }
+
+    /* Membuat tampilan dropdown untuk versi mobile */
+    nav ul li ul.dropdown {
+        position: relative; /* Mengubah posisi dropdown menjadi relatif */
+        display: block;
+        width: 100%; /* Mengatur lebar dropdown */
+    }
+
+    nav ul li ul.dropdown li {
+        display: none; /* Sembunyikan elemen dropdown */
+    }
+
+    nav ul li:hover ul.dropdown li {
+        display: block; /* Tampilkan elemen dropdown saat tombol navbar dihover */
+    }
+}
+/* Style untuk footer */
+footer {
+    background-color: #007bff; /* Warna latar belakang sesuai dengan navbar */
+    color: white; /* Warna teks */
+    text-align: center; /* Rata tengah teks */
+    padding: 5px 0; /* Padding atas dan bawah dikurangi */
+    font-size: 12px; /* Ukuran font lebih kecil */
+    width: 100%; /* Lebar penuh */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+    position: static; /* Posisi tetap di bagian bawah konten */
+}
+
+footer a {
+    color: white; /* Warna tautan */
+    text-decoration: none; /* Hilangkan garis bawah tautan */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Tautan bergaris bawah saat dihover */
+}
